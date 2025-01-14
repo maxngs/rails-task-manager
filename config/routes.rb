@@ -7,5 +7,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  # User can list all the tasks
   get "tasks", to: "tasks#index"
+
+  # User can see the details
+  get "tasks/:id", to: "tasks#show"
 end
