@@ -18,4 +18,7 @@ Rails.application.routes.draw do
   # User can see the details
   get "tasks/:id", to: "tasks#show", as: :task
 
+  # User can edit its tasks
+  get "tasks/:id/edit", to: "tasks#edit", as: :edit
+  patch "tasks/:id", to: "tasks#update"
 end
