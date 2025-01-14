@@ -21,4 +21,7 @@ Rails.application.routes.draw do
   # User can edit its tasks
   get "tasks/:id/edit", to: "tasks#edit", as: :edit
   patch "tasks/:id", to: "tasks#update"
+
+  # User can delete a task
+  delete "tasks/:id", to: "tasks#destroy"
 end
