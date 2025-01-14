@@ -10,6 +10,12 @@ Rails.application.routes.draw do
   # User can list all the tasks
   get "tasks", to: "tasks#index", as: :tasks
 
+  # Create a task
+  get "tasks/new", to: "tasks#new", as: :new
+  # Submit a task
+  post "tasks", to: "tasks#create"
+
   # User can see the details
   get "tasks/:id", to: "tasks#show", as: :task
+
 end
